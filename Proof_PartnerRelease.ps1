@@ -13,7 +13,7 @@ $DatabaseName = "MyDataBase"
 $WorkDir = "C:\Temp\Objects\"
 MD $WorkDir -Force
 
-Export-NAVApplicationObject -DatabaseName $DatabaseName -Path $WorkDirExport.txt -ExportTxtSkipUnlicensed
+Export-NAVApplicationObject -DatabaseName $DatabaseName -Path $WorkDir"Export.txt" -ExportTxtSkipUnlicensed
 
 $SplitPath = $WorkDir+"\Export\"
 Split-NAVApplicationObjectFile -Source $WorkDir"Export.txt" -Destination $SplitPath -Force
