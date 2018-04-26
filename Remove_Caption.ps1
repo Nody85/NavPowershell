@@ -15,5 +15,5 @@ MD $WorkDir -Force
 
 Export-NAVApplicationObject -DatabaseName $DatabaseName -Path $WorkDir"Export.txt" -ExportTxtSkipUnlicensed
 
-$CaptionList = "DEU"
+$CaptionList = "DEU" #"DEU,DES,ITS,FRS"
 Remove-NAVApplicationObjectLanguage -Destination $WorkDir"Export_Captionless.txt" -Source $WorkDir"Export.txt" -LanguageId $CaptionList
