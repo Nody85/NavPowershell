@@ -4,10 +4,10 @@
 #Step 3 Try to Re-Import the Objects if there is any Syntax Errror or you can not import an Object with your license, you will see it in the logpath to investigate
 
 $NavVersion = 100
-$NavIde="C:\Program Files (x86)\Microsoft Dynamics NAV\$NavVersion\RoleTailored Client\finsql.exe"
 Import-Module "C:\Program Files (x86)\Microsoft Dynamics NAV\$NavVersion\RoleTailored Client\NavModelTools.ps1"
 Import-Module "C:\Program Files (x86)\Microsoft Dynamics NAV\$NavVersion\RoleTailored Client\Microsoft.Dynamics.Nav.Ide.psm1"
 Import-module "C:\Program Files\Microsoft Dynamics NAV\$NavVersion\Service\NavAdminTool.ps1"
+$NavIde="C:\Program Files (x86)\Microsoft Dynamics NAV\$NavVersion\RoleTailored Client\finsql.exe"
 
 $DatabaseName = "MyDataBase"
 $WorkDir = "C:\Temp\Objects\"
