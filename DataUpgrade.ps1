@@ -14,6 +14,7 @@ Get-NAVDataUpgrade -ServerInstance $ServerInstanceName -Detailed  | ogv
 
 Resume-NAVDataUpgrade -ServerInstance $ServerInstanceName
 
+#Run Single Function on demand
 Resume-NAVDataUpgrade -CodeunitId 104000 -FunctionName "SAMPLEFUNCTIONNAME" -ServerInstance $ServerInstanceName -CompanyName "SAMPLECOMPANY"
 
 Stop-NAVDataUpgrade -ServerInstance $ServerInstanceName
