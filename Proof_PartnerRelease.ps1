@@ -10,7 +10,7 @@ Import-module "C:\Program Files\Microsoft Dynamics NAV\$NavVersion\Service\NavAd
 $NavIde="C:\Program Files (x86)\Microsoft Dynamics NAV\$NavVersion\RoleTailored Client\finsql.exe"
 
 $DatabaseName = "MyDataBase"
-$WorkDir = "C:\Temp\Objects\"
+$WorkDir = "C:\Temp\$DatabaseName\Objects\"
 MD $WorkDir -Force
 
 Export-NAVApplicationObject -DatabaseName $DatabaseName -Path $WorkDir"Export.txt" -ExportTxtSkipUnlicensed
