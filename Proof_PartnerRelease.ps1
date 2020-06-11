@@ -3,10 +3,11 @@
 #Step 2 Splits all Objects that could be exported
 #Step 3 Try to Re-Import the Objects if there is any Syntax Errror or you can not import an Object with your license, you will see it in the logpath to investigate
 
-Import-Module "C:\Program Files (x86)\Microsoft Dynamics 365 Business Central\130\RoleTailored Client\NavModelTools.ps1"
-Import-Module "C:\Program Files (x86)\Microsoft Dynamics 365 Business Central\130\RoleTailored Client\Microsoft.Dynamics.Nav.Ide.psm1"
-Import-module "C:\Program Files\Microsoft Dynamics 365 Business Central\130\Service\NavAdminTool.ps1"
-$NavIde="C:\Program Files (x86)\Microsoft Dynamics 365 Business Central\130\RoleTailored Client\finsql.exe"
+$NavVersion = 140
+Import-Module "C:\Program Files (x86)\Microsoft Dynamics 365 Business Central\$NavVersion\RoleTailored Client\NavModelTools.ps1"
+Import-Module "C:\Program Files (x86)\Microsoft Dynamics 365 Business Central\$NavVersion\RoleTailored Client\Microsoft.Dynamics.Nav.Ide.psm1"
+Import-module "C:\Program Files\Microsoft Dynamics 365 Business Central\$NavVersion\Service\NavAdminTool.ps1"
+$NavIde="C:\Program Files (x86)\Microsoft Dynamics 365 Business Central\$NavVersion\RoleTailored Client\finsql.exe"
 
 $DatabaseName = "MyDataBase"
 $WorkDir = "C:\Temp\$DatabaseName\Objects\"
