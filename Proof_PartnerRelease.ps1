@@ -12,12 +12,14 @@ $NavIde="C:\Program Files (x86)\Microsoft Dynamics 365 Business Central\$NavVers
 $DatabaseName = "MyDataBase"
 $WorkDir = "C:\Temp\$DatabaseName\Objects\"
 MD $WorkDir -Force
-
+#Step 1
 Export-NAVApplicationObject -DatabaseName $DatabaseName -Path $WorkDir"Export.txt" -ExportTxtSkipUnlicensed
 
+#Step 2
 $SplitPath = $WorkDir+"\Export\"
 Split-NAVApplicationObjectFile -Source $WorkDir"Export.txt" -Destination $SplitPath -Force
 
+#Step3
 $WorkDirLogPath = $WorkDir+"LogPath"
 $ReImportEveryFile = $SplitPath+"*.txt"
 Import-NAVApplicationObject -DatabaseName $DatabaseName -Path $ReImportEveryFile -ImportAction Overwrite -LogPath $WorkDirLogPath -SynchronizeSchemaChanges Force -Confirm:$false
